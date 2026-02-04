@@ -1,0 +1,19 @@
+
+
+.Navbar{
+    width: 100%;
+    height: var( --navbar-height);
+    background: var(--navbar-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    .links{
+        >a{
+            &:first-child{
+                margin-right: 10px;
+            }
+            font-weight: 500;
+        }
+    }
+} 

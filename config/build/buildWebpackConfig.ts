@@ -19,8 +19,8 @@ export function buildWebpackConfig(options: BuilldOptions): webpack.Configuratio
         module:{
             rules: buildRules(options),
         },
-        resolve:buildResolves(),
-        plugins: buildPlugins(paths),
+        resolve:buildResolves(options),
+        plugins: buildPlugins(paths, isDev),
         devtool: isDev? "inline-source-map" : undefined,
         devServer: isDev? buildDevServer(options) : undefined
     }

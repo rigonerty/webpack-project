@@ -15,15 +15,11 @@ interface props{
 
 
 export const Navbar = ({className}:props) => {
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
 
-  const toggle = ()=>{
-    i18n.changeLanguage(i18n.language === "ru"? "en" : "ru");
-  }
   
   return (
     <div className={ classNames(cl.navbar, {}, [className]) }>
-        <button onClick={toggle}>{t("ChangeLanguage")}</button>
         <div className={cl.links}>
             
             <AppLink to={RoutePath.main} theme={AppLinkTheme.SECONDARY}>{t("LinkHome") }</AppLink>

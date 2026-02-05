@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div>
         <h1>{t("TitlePage")}</h1>
+        <p>new as asd asdas d</p>
         <p>
             {t("Paragraph")}
         </p>

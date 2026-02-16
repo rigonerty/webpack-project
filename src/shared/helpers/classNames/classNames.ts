@@ -10,7 +10,7 @@ export function classNames(cls:string, mods: IMods = {}, additional: string[] = 
     return [
         cls,
         ...Object.entries(mods)
-            .filter(([className, val])=> Boolean(val))
+            .filter(([, val])=> Boolean(val))
             .map(([className])=> className),
         ...additional,
     ].join(" ");

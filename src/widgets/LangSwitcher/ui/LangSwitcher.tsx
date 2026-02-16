@@ -7,17 +7,17 @@ interface props{
     className?: string;
 }
 export const LangSwitcher = ({className}:props) => {
-      const { t, i18n } = useTranslation();
-    
-      const toggle = ()=>{
+    const { t, i18n } = useTranslation();
+
+    const toggle = ()=>{
         i18n.changeLanguage(i18n.language === "ru"? "en" : "ru");
-      }
+    }
     return (
-            <Button 
+        <Button 
             onClick={toggle} 
             theme={ThemeButton.CLEAR}
             className={ classNames(cl.langSwitcher, {}, [className]) }>
-                {t("ChangeLanguage")}
-            </Button>
+            {t("ChangeLanguage")}
+        </Button>
     )
 }

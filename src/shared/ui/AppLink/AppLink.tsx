@@ -1,7 +1,6 @@
 import { Link, LinkProps } from 'react-router-dom';
 import cl from './AppLink.module.scss'
 import { classNames } from '@src/shared/helpers/classNames/classNames'
-import { ReactNode } from 'react';
 
 
 export enum AppLinkTheme {

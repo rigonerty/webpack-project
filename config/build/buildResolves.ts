@@ -1,4 +1,3 @@
-import path from "path";
 import webpack from "webpack";
 import { BuilldOptions } from "./types/config";
 
@@ -11,5 +10,6 @@ export function buildResolves(options: BuilldOptions): webpack.ResolveOptions{
             "@src/*": options.paths.src + "/*", // maps @something to path/to/something
         },
         mainFiles: ["index"],
+        
     }
 }

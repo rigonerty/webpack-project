@@ -32,11 +32,11 @@ export function buildRules({isDev}:BuilldOptions): webpack.RuleSetRule[]{
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff)$/i,
         use: [
-          {
-            loader: 'file-loader',
-          },
+            {
+                loader: 'file-loader',
+            },
         ],
-      }
+    }
 
     const svgLoader = {
         test: /\.svg$/,
@@ -44,14 +44,14 @@ export function buildRules({isDev}:BuilldOptions): webpack.RuleSetRule[]{
     }
 
     const babelLoader = {
-        test: /\.(js|jsx|tsx)$/,
+        test: /\.(js|jsx|tsx|mjs)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: [isDev && "react-refresh/babel"]
-          }
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env'],
+                plugins: [isDev && "react-refresh/babel"]
+            }
         }
     }
     return [
@@ -60,5 +60,5 @@ export function buildRules({isDev}:BuilldOptions): webpack.RuleSetRule[]{
         babelLoader,
         typeScriptLoader,
         styleScssLoader,
-        ]
+    ]
 }

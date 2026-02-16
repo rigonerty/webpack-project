@@ -8,7 +8,7 @@ interface UseThemeResults{
 
 
 export function useTheme(): UseThemeResults{
-     const {theme, setTheme} = useContext(ThemeContext)
+    const {theme, setTheme} = useContext(ThemeContext)
     
     const toggleTheme = ()=>{
         const newTheme:Theme = theme == Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
